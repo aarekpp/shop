@@ -1,0 +1,51 @@
+header {
+	background-color: whitesmoke;
+	height: 4em;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header > div {
+	height: inherit;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 1em;
+}
+.logo {
+	width: 10em;
+}
+.searchBar {
+	width: 50%;
+}
+.tiles {
+	width: 15em;
+}
+.searchInput,
+.searchButton {
+	outline: none;
+	border: .1px solid gray;
+	border-radius: 45px;
+	height: 2.5em;
+	font-size: 14px;
+}
+.searchInput {
+	width: 70%;
+	text-indent: 1em;
+}
+.searchButton {
+	width: 5em;
+	margin-left: -2em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.searchButton:hover {
+	color: white;
+	background-color: rgb(34, 34, 34);
+	cursor: pointer;
+}
+.searchButton:active {
+	background-color: rgb(55, 55, 55);
+}
