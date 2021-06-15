@@ -2,23 +2,6 @@ import React, { Component } from 'react';
 import PanelCard from './PanelCard';
 
 export default class HelpTile extends Component {
-	state = {
-		panelDisplay: false,
-		tileMouseEnter: false,
-		width: '',
-		top: '',
-		left: ''
-	};
-
-	togglePanelDisplay = () => {
-		const tileBox = document.querySelector('.tiles');
-
-		this.setState({ panelDisplay: !this.state.panelDisplay });
-		this.setState({ tileMouseEnter: !this.state.tileMouseEnter });
-		this.setState({ width: tileBox.getBoundingClientRect().width });
-		this.setState({ top: tileBox.getBoundingClientRect().height });
-		this.setState({ left: tileBox.getBoundingClientRect().left });
-	};
 	cards = [
 		{ name: 'Shipment status', href: '/shipment' },
 		{ name: 'Installments', href: '/installments' },
@@ -28,11 +11,7 @@ export default class HelpTile extends Component {
 
 	render() {
 		return (
-			<div
-				onMouseEnter={this.togglePanelDisplay}
-				onMouseLeave={this.togglePanelDisplay}
-				className={this.state.tileMouseEnter ? 'tile tileHover' : 'tile'}
-			>
+			<div className="tile">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="30"
@@ -46,8 +25,8 @@ export default class HelpTile extends Component {
 				</svg>
 				<p>Help</p>
 				<div
-					style={{ width: this.state.width, top: this.state.top, left: this.state.left }}
-					className={this.state.panelDisplay ? 'helpTile panelDisplay' : 'helpTile'}
+					className="helpTile"
+					style={{ width: this.props.width, top: this.props.top, left: this.props.left }}
 				>
 					<PanelCard cards={this.cards} />
 				</div>

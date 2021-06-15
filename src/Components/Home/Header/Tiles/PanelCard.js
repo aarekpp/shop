@@ -8,10 +8,8 @@ export default class PanelCard extends Component {
 
 	render() {
 		return this.props.cards.map((card) => (
-			<Link to={'/advanced' + card.href}>
-				<p key={card.name} className="panelCard">
-					{card.name}
-				</p>
+			<Link key={card.name} to={'/advanced' + card.href}>
+				<p className="panelCard">{card.name}</p>
 			</Link>
 		));
 	}

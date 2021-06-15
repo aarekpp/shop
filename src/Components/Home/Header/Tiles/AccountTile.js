@@ -2,31 +2,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 export default class AccountTile extends Component {
-	state = {
-		panelDisplay: false,
-		tileMouseEnter: false,
-		width: '',
-		top: '',
-		left: ''
-	};
-
-	togglePanelDisplay = () => {
-		const tileBox = document.querySelector('.tiles');
-
-		this.setState({ panelDisplay: !this.state.panelDisplay });
-		this.setState({ tileMouseEnter: !this.state.tileMouseEnter });
-		this.setState({ width: tileBox.getBoundingClientRect().width });
-		this.setState({ top: tileBox.getBoundingClientRect().height });
-		this.setState({ left: tileBox.getBoundingClientRect().left });
-	};
-
 	render() {
 		return (
-			<div
-				className={this.state.tileMouseEnter ? 'tile tileHover' : 'tile'}
-				onMouseEnter={this.togglePanelDisplay}
-				onMouseLeave={this.togglePanelDisplay}
-			>
+			<div className="tile">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="35"
@@ -39,8 +17,8 @@ export default class AccountTile extends Component {
 				</svg>
 				<p>Account</p>
 				<div
-					style={{ width: this.state.width, top: this.state.top, left: this.state.left }}
-					className={this.state.panelDisplay ? 'accountTile panelDisplay' : 'accountTile'}
+					className="accountTile"
+					style={{ width: this.props.width, top: this.props.top, left: this.props.left }}
 				>
 					<Link to="/login" className="aPanelButton">
 						<button className="button">Sing in</button>

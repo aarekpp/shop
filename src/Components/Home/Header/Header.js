@@ -5,6 +5,27 @@ import HelpTile from './Tiles/HelpTile';
 import './Header.css';
 
 export default class Header extends Component {
+	state = {
+		width: '',
+		left: '',
+		top: ''
+	};
+
+	toggleDisplayPanel = (e) => {
+		const panel = e.target.querySelector('div');
+		const tileBox = document.querySelector('.tiles');
+		this.setState({ width: tileBox.getBoundingClientRect().width });
+		this.setState({ left: tileBox.getBoundingClientRect().left });
+		this.setState({ top: tileBox.getBoundingClientRect().height });
+		panel.classList.toggle('panelDisplay');
+	};
+
+	componentDidMount() {
+		const tiles = document.querySelectorAll('.tile');
+		tiles.forEach((tile) => tile.addEventListener('mouseenter', this.toggleDisplayPanel));
+		tiles.forEach((tile) => tile.addEventListener('mouseleave', this.toggleDisplayPanel));
+	}
+
 	render() {
 		return (
 			<header>
@@ -25,9 +46,9 @@ export default class Header extends Component {
 					</button>
 				</div>
 				<div className="tiles">
-					<AccountTile />
-					<CartTile />
-					<HelpTile />
+					<AccountTile width={this.state.width} top={this.state.top} left={this.state.left} />
+					<CartTile width={this.state.width} top={this.state.top} left={this.state.left} />
+					<HelpTile width={this.state.width} top={this.state.top} left={this.state.left} />
 				</div>
 			</header>
 		);

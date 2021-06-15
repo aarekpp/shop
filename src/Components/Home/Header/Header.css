@@ -46,17 +46,6 @@ a {
 	align-items: center;
 	justify-content: center;
 }
-.searchButton:hover,
-.button:hover,
-.tileHover {
-	color: white;
-	background-color: rgb(34, 34, 34);
-	cursor: pointer;
-}
-.searchButton:active,
-.button:active {
-	background-color: rgb(55, 55, 55);
-}
 .tile {
 	width: 33.33%;
 	display: block;
@@ -65,11 +54,20 @@ a {
 	border-radius: 15px 15px 0 0;
 	padding-top: 6px;
 }
-.tileHover {
-	box-shadow: 0 0 1em rgb(43, 43, 43);
-}
 .tile p {
 	font-size: 14px;
+}
+.searchButton:hover,
+.button:hover,
+.tile:hover {
+	color: white;
+	background-color: rgb(34, 34, 34);
+	cursor: pointer;
+	box-shadow: 0 0 1em rgb(43, 43, 43);
+}
+.searchButton:active,
+.button:active {
+	background-color: rgb(55, 55, 55);
 }
 .bi-info-square {
 	margin-top: 3px;
@@ -122,12 +120,6 @@ a {
 	box-shadow: 0 0 1em rgb(43, 43, 43);
 	color: black;
 }
-.panelDisplay {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
 .helpTile a:link,
 a:visited {
 	text-decoration: none;
@@ -142,4 +134,10 @@ a:visited {
 .panelCard:hover {
 	color: white;
 	background-color: rgb(34, 34, 34);
+}
+.panelDisplay {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
