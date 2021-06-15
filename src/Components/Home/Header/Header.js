@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-//import { Link } from 'react-router-dom';
+import AccountTile from './Tiles/AccountTile';
+import CartTile from './Tiles/CartTile';
+import HelpTile from './Tiles/HelpTile';
 import './Header.css';
 
 export default class Header extends Component {
@@ -22,7 +24,11 @@ export default class Header extends Component {
 						</svg>
 					</button>
 				</div>
-				<div className="tiles">Tiles</div>
+				<div className="tiles">
+					<AccountTile />
+					<CartTile />
+					<HelpTile />
+				</div>
 			</header>
 		);
 	}
