@@ -1,6 +1,17 @@
+.logoHome {
+	width: 100%;
+	background-color: whitesmoke;
+	display: flex;
+	height: 4em;
+}
+.logoHomePage {
+	display: flex;
+	align-items: center;
+	width: 20%;
+	margin: 0 0 0 2.5em;
+}
 .loginContainer {
 	width: 100%;
-	height: 100%;
 	text-align: center;
 	padding-top: 2em;
 	background-color: whitesmoke;
@@ -45,17 +56,35 @@
 	background-color: rgb(32, 32, 32);
 	color: white;
 }
+.loginContainer p {
+	margin: 1em 0 .5em 0;
+}
+.registerButtonLoginPage {
+	width: 50%;
+}
 @media (min-width: 768px) and (max-width: 1365px) {
+	.logoHomePage {
+		width: 20%;
+		margin: 0 0 0 3em;
+	}
 	.loginForm {
 		width: 60%;
 	}
 }
 @media (min-width: 1366px) {
+	.logoHomePage {
+		width: 20%;
+		margin: 0 0 0 5em;
+	}
 	.loginForm {
 		width: 30%;
 	}
 }
 @media (min-width: 1920px) {
+	.logoHomePage {
+		width: 20%;
+		margin: 0 0 0 6em;
+	}
 	.loginForm {
 		width: 25%;
 	}

@@ -1,0 +1,44 @@
+fieldset {
+	border: none;
+	display: flex;
+	flex-direction: column;
+	padding: 0 0 .5em 0;
+}
+fieldset label {
+	padding: 0 0 .3em 0;
+}
+.registerPage {
+	background-color: whitesmoke;
+}
+.registerContainer {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.registerContainer > span {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 25px;
+	padding: .2em 0 .5em 0;
+}
+.registerFormInput {
+	outline: none;
+	border: 1px solid gray;
+	height: 1.8em;
+	border-radius: 5px;
+	text-indent: .7em;
+	padding: 1em 0;
+}
+.checkboxes {
+	display: block;
+}
+.checkboxes input {
+	margin: 0 .5em 0 0;
+}
+.checkboxes span {
+	font-size: 15px;
+}
+.checkboxes > div {
+	margin: 0 0 .2em 0;
+}

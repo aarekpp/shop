@@ -17,8 +17,12 @@ header > div {
 a {
 	width: 100%;
 }
-.logo {
+.aLogo {
 	width: 10em;
+}
+.logo {
+	width: 100%;
+	text-align: center;
 }
 .searchBar {
 	width: 50%;

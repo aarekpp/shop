@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import AccountTile from './Tiles/AccountTile';
 import CartTile from './Tiles/CartTile';
 import HelpTile from './Tiles/HelpTile';
@@ -29,7 +30,9 @@ export default class Header extends Component {
 	render() {
 		return (
 			<header>
-				<div className="logo">LOGO</div>
+				<Link to="/" className="aLogo">
+					<div className="logo">LOGO</div>
+				</Link>
 				<div className="searchBar">
 					<input id="searchInput" className="searchInput" type="text" />
 					<button id="seachButton" className="searchButton">
