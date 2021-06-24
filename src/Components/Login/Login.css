@@ -60,7 +60,7 @@
 	margin: 1em 0 .5em 0;
 }
 .registerButtonLoginPage {
-	width: 50%;
+	width: 80%;
 }
 @media (min-width: 768px) and (max-width: 1365px) {
 	.logoHomePage {
@@ -68,7 +68,10 @@
 		margin: 0 0 0 3em;
 	}
 	.loginForm {
-		width: 60%;
+		width: 50%;
+	}
+	.registerButtonLoginPage {
+		width: 50%;
 	}
 }
 @media (min-width: 1366px) {
@@ -77,6 +80,9 @@
 		margin: 0 0 0 5em;
 	}
 	.loginForm {
+		width: 40%;
+	}
+	.registerButtonLoginPage {
 		width: 30%;
 	}
 }
@@ -86,6 +92,9 @@
 		margin: 0 0 0 6em;
 	}
 	.loginForm {
-		width: 25%;
+		width: 30%;
+	}
+	.registerButtonLoginPage {
+		width: 20%;
 	}
 }

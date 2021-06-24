@@ -18,29 +18,37 @@ function Register() {
 	};
 	const [ state, setState ] = useState(initialState);
 
+	const setStyle = (index, test) => {
+		if (test) {
+			document.querySelector(`[data-index='${index}']`).classList.add('correct');
+			document.querySelector(`[data-index='${index}']`).classList.remove('incorrect');
+		} else {
+			document.querySelector(`[data-index='${index}']`).classList.add('incorrect');
+		}
+	};
+
 	const namesValidate = (e) => {
 		if (/^[A-Z][a-z]{1,30}$/.test(e.target.value)) {
-			if (e.target.dataset.index === '1') {
-				onBlurUpdate(e.target.name, e.target.value);
-			} else {
-				onBlurUpdate(e.target.name, e.target.value);
-			}
+			setStyle(e.target.dataset.index, true);
+			onBlurUpdate(e.target.name, e.target.value);
 		} else {
-			if (e.target.dataset.index === '1') {
-			} else {
-			}
+			setStyle(e.target.dataset.index, false);
 		}
 	};
 
 	const passwordsValidate = (e) => {
 		if (e.target.dataset.index === '4') {
 			if (/^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*]).{8,32}$/.test(e.target.value)) {
+				setStyle(e.target.dataset.index, true);
 				onBlurUpdate(e.target.name, e.target.value);
 			} else {
+				setStyle(e.target.dataset.index, false);
 			}
 		} else {
 			if (e.target.value === document.querySelector("[data-index='4']").value) {
+				setStyle(e.target.dataset.index, true);
 			} else {
+				setStyle(e.target.dataset.index, false);
 			}
 		}
 	};
@@ -48,10 +56,10 @@ function Register() {
 	const emailvalidate = async (e) => {
 		const isEmailExist = await chceckEmailAvailability(e.target.value);
 		if (isEmailExist) {
+			setStyle(e.target.dataset.index, true);
 			onBlurUpdate(e.target.name, e.target.value);
-			document.querySelector("[data-index='3']").style.border = '2px solid green';
 		} else {
-			document.querySelector("[data-index='3']").style.border = '2px solid red';
+			setStyle(e.target.dataset.index, false);
 		}
 	};
 
@@ -81,18 +89,8 @@ function Register() {
 		}
 	};
 
-	const [ height, setHeight ] = useState();
-
-	useEffect(() => {
-		const setPageHeight = () => {
-			setHeight(document.querySelector('body').offsetHeight);
-		};
-		window.onload = setPageHeight();
-		window.addEventListener('resize', setPageHeight);
-	}, []);
-
 	return (
-		<div className="registerPage" style={{ height: height }}>
+		<div className="registerPage">
 			<div className="logoHome">
 				<Link to="/" className="logoHomePage">
 					LOGO
@@ -166,6 +164,10 @@ function Register() {
 					</fieldset>
 					<button className="loginButton">Sing up</button>
 				</form>
+				<p>Have an account?</p>
+				<Link to="/login">
+					<button className="loginButtonRegisterPage loginButton">Sing in</button>
+				</Link>
 			</div>
 		</div>
 	);

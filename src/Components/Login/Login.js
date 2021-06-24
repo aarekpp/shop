@@ -2,13 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
 export default class Login extends Component {
-	state = {
-		height: ''
-	};
-
-	setPageHeight = () => {
-		this.setState({ height: document.querySelector('body').offsetHeight });
-	};
 
 	login = (e) => {
 		e.preventDefault();
@@ -21,17 +14,12 @@ export default class Login extends Component {
 		const hash = bcrypt.hashSync(password, 10);
 	};
 
-	componentDidMount() {
-		window.onresize = this.setPageHeight;
-		this.setPageHeight();
-	}
-
 	render() {
 		return (<>
 			<div className="logoHome">
 				<Link to="/" className="logoHomePage">LOGO</Link>
 			</div>
-			<div className="loginContainer" style={{ height: this.state.height }}>
+			<div className="loginContainer">
 				<span>Sing in</span>
 				<form className="loginForm" onSubmit={this.login}>
 					<label>Email</label>

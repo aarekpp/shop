@@ -7,9 +7,6 @@ fieldset {
 fieldset label {
 	padding: 0 0 .3em 0;
 }
-.registerPage {
-	background-color: whitesmoke;
-}
 .registerContainer {
 	width: 100%;
 	display: flex;
@@ -21,6 +18,15 @@ fieldset label {
 	font-weight: bold;
 	font-size: 25px;
 	padding: .2em 0 .5em 0;
+}
+.registerForm {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1.5em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 .registerFormInput {
 	outline: none;
@@ -41,4 +47,60 @@ fieldset label {
 }
 .checkboxes > div {
 	margin: 0 0 .2em 0;
+}
+.registerContainer p {
+	margin: .5em 0 0 0;
+}
+.registerContainer a {
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	text-align: center;
+}
+.loginButtonRegisterPage {
+	width: 100%;
+}
+.correct {
+	border: 1px solid green;
+	background-color: rgb(204, 255, 204);
+}
+.incorrect {
+	border: 1px solid red;
+	background-color: rgb(255, 204, 204);
+}
+@media (min-width: 768px) and (max-width: 1365px) {
+	.logoHome {
+		width: 20%;
+		margin: 0 0 0 3em;
+	}
+	.registerForm {
+		width: 40%;
+	}
+	.loginButtonRegisterPage {
+		width: 40%;
+	}
+}
+@media (min-width: 1366px) {
+	.logoHome {
+		width: 20%;
+		margin: 0 0 0 5em;
+	}
+	.registerForm {
+		width: 40%;
+	}
+	.loginButtonRegisterPage {
+		width: 30%;
+	}
+}
+@media (min-width: 1920px) {
+	.logoHome {
+		width: 20%;
+		margin: 0 0 0 6em;
+	}
+	.registerForm {
+		width: 30%;
+	}
+	.loginButtonRegisterPage {
+		width: 20%;
+	}
 }
