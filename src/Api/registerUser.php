@@ -74,9 +74,8 @@
         endif;
     endif;
     
-    echo json_encode($response);
-
-    $response=null;
     $data=null;
     $conn=null;
+
+    echo json_encode($response);
 ?>

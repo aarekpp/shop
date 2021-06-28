@@ -1,0 +1,92 @@
+.productsDisplayContainer {
+	display: flex;
+	justify-content: center;
+	padding: 2em 0 0 0;
+}
+.filters {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid black;
+	border-radius: 10px;
+	width: 15%;
+	background-color: lightsteelblue;
+	margin: 0 3em 0 0;
+}
+.products {
+	width: 60%;
+	border-radius: 10px;
+}
+.productTile {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 30%;
+	height: 25em;
+	border: 1px solid transparent;
+	float: left;
+}
+.productTile::after {
+	content: "";
+	background: rgb(215, 215, 215);
+	position: absolute;
+	left: 5%;
+	bottom: 0;
+	width: 90%;
+	height: .5px;
+}
+.productTile:hover {
+	border-radius: 10px;
+	border: 1px solid rgb(215, 215, 215);
+	box-shadow: 0 0 .5em rgb(43, 43, 43);
+	cursor: pointer;
+}
+.productTile > p {
+	text-align: center;
+	padding: .3em 0;
+}
+.productTileImg {
+	width: 50%;
+	height: 60%;
+	margin: .5em auto;
+}
+.productTilePrice {
+	position: absolute;
+	bottom: 1em;
+	left: 1em;
+	font-size: 20px;
+	font-weight: bold;
+}
+.addToCartButton {
+	position: absolute;
+	bottom: 1em;
+	right: 1em;
+	outline: none;
+	background: none;
+	border-radius: 50%;
+	border: 1px solid rgb(43, 43, 43);
+	width: 3em;
+	height: 3em;
+	transition: 300ms ease-out;
+}
+.addToCartButton:hover {
+	background-color: rgb(43, 43, 43);
+	color: white;
+	cursor: pointer;
+}
+@media (max-width: 1000px) {
+	.filters {
+		width: 25%;
+	}
+	.productTile {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+		height: 25em;
+		border: 1px solid transparent;
+		float: left;
+	}
+}

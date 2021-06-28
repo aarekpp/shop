@@ -1,0 +1,64 @@
+nav {
+	width: 100%;
+	height: 2.8em;
+	background-color: rgb(224, 224, 224);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 5;
+}
+nav a {
+	width: 12%;
+}
+nav a:link {
+	color: black;
+	text-decoration: none;
+	height: inherit;
+}
+.mainCategoryCard {
+	height: inherit;
+	text-align: center;
+	border-radius: 10px 10px 0 0;
+}
+.mainCategoryCard li {
+	list-style-type: none;
+	padding: 0 .5em;
+	width: 100%;
+	height: inherit;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.mainCategoryCard:hover {
+	background-color: rgb(34, 34, 34);
+	cursor: pointer;
+	color: white;
+}
+.mainCategoryPanel {
+	position: fixed;
+	border: 1px solid black;
+	display: none;
+	z-index: 5;
+	border-radius: 0 10px 10px 10px;
+	padding: .5em 0;
+	min-width: 16em;
+	background-color: whitesmoke;
+}
+.mainCategoryPanelDisplay {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	color: black;
+	box-shadow: 0 0 1em rgb(43, 43, 43);
+}
+.mainCategoryPanel a {
+	width: 100%;
+}
+.mainCategoryPanel li {
+	padding: .5em 1em;
+}
+.mainCategoryPanel li:hover {
+	background-color: rgb(34, 34, 34);
+	color: white;
+}

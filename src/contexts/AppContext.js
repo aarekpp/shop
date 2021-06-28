@@ -1,5 +1,4 @@
 import React, { Component, createContext } from 'react';
-import axios from 'axios';
 export const AppContext = createContext();
 
 export default class AppContextProvider extends Component {
